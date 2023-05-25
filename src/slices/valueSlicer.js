@@ -20,12 +20,12 @@ export const valueSlicer=createSlice(
                 decrementBy(state,action){
                     state.amt=state.amt-Number(action.payload);
                 },
-                resizeTo(state,action){
-                    state=0;
+                reset(state,action){
+                    state.amt=0;
                 }
             }           
         }
 );
 
 export default valueSlicer.reducer;
-export const {increment,decrement,incrementBy,decrementBy} =valueSlicer.actions;
+export const {increment,decrement,incrementBy,decrementBy,reset} =valueSlicer.actions;
